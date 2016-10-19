@@ -1,10 +1,10 @@
 var bio = {
     'name' : 'Vinod Thimmapuram',
-    'role' : 'Full Stack Software Developer',
+    'role' : 'Full Stack Software Engineer',
     'contacts' : {
         'mobile' : '513-237-9425',
         'email' : 'tgvinodkumar@gmail.com',
-        'github' : 'www.github.com',
+        'github' : 'https://github.com/tgvinodkumar',
         'location' : 'Austin TX'
     },
     'welcomeMessage' : ' Thank you for visiting my online resume page.',
@@ -39,33 +39,60 @@ var bio = {
 var work = {
     'jobs' : [
         {
+            'employer' : 'NCI Building Systems',
+            'title' : 'Software Developer',
+            'dates' : '2010 - 2014',
+            'location' : 'Oklahoma City, OK',
+            'description' : [`Improved the proprietary Fortran-based design software to automate 
+                                hand calculations resulting in an average of 20%  increase in engineer 
+                                productivity in designing prefabricated metal buildings`,
+                                `Managed a team of 2 junior developers, overseeing work and resolving 
+                                issues to meet deadlines`,
+                                `Standardized the team’s build process using open source CruiseControl 
+                                continuous integration tool`,
+                                `Worked with the client to understand their business needs and translate 
+                                to technical requirements`]
+        },
+        {
+            'employer' : 'Tutor Perini Building Company',
+            'title' : 'Senior Project Engineer',
+            'dates' : '2014 - 2015',
+            'location' : 'New York City, NY',
+            'description' : [`Coordinated the construction process with all stakeholders to ensure the 
+                            deadlines are met`,
+                            `Prepared project schedule and resource allocation charts with a team of 4 
+                            engineers and managers`]
+        },
+        {
+            'employer' : 'Tutor Perini Building Company',
+            'title' : 'Senior Project Engineer',
+            'dates' : '2006 - 2010',
+            'location' : 'Las Vegas, NV',
+            'description' : [`Contributed in a key role on $600 million 300,000 sq.ft. area MGM Aria Resort 
+                            and Casino project in Las Vegas`,
+                            `Coordinated the construction process with all stakeholders to ensure the 
+                            deadlines are met`,
+                            `Prepared project schedule and resource allocation charts with a team of 4 
+                            engineers and managers`]
+        },
+        {
             'employer' : 'KPFF Consulting Engineers',
             'title' : 'Design Engineer',
             'dates' : '2005 - 2006',
             'location' : 'Los Angeles, CA',
-            'description' : 'Design Engineer'
+            'description' : [`Provided technical, analytical, and design support for over 5 civil engineering projects`]
         },
-        {
-            'employer' : 'Tutor Perini Building Company',
-            'title' : 'Project Engineer',
-            'dates' : '2006 - 2010',
-            'location' : 'Las Vegas, NV',
-            'description' : 'Project Engineer'
-        },
-        {
-            'employer' : 'NCI Building Systems',
-            'title' : 'Systems Analyst/Software Developer',
-            'dates' : '2010 - 2015',
-            'location' : 'Oklahoma City, OK',
-            'description' : 'Systems Analyst/Software Developer'
-        }
+
     ],
     display : function() {
         work.jobs.forEach(function(job) {
             $('#workExperience').append(HTMLworkStart);
             $('.work-entry:last').append(HTMLworkEmployer.replace('%data%',job.employer)+HTMLworkTitle.replace('%data%',job.title));
             $('.work-entry:last').append(HTMLworkDates.replace('%data%', job.dates));
-            $('.work-entry:last').append(HTMLworkDescription.replace('%data%', job.description));
+            $('.work-entry:last').append(HTMLworkDescriptionStart);
+            job.description.forEach(function(desc){
+                $('.work-entry:last').append(HTMLworkDescription.replace('%data%', desc));
+            })
         });
     }
 };
