@@ -103,7 +103,7 @@ var projects = {
         'title' : 'QuickerCater',
         'dates' : '2016',
         'description': 'A cutting edge marketplace connecting selected local chefs and caterers to the hungry users',
-        'images':['http://lorempixel.com/350/200/animals/', 'http://lorempixel.com/350/200/animals/'],
+        'images':['images/QuickerCater1.jpg', 'images/QuickerCater2.jpg'],
         'url':'https://quickercater.herokuapp.com/'
     },
     {
