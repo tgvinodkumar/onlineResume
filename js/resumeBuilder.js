@@ -110,14 +110,14 @@ var projects = {
         'title' : 'Magic Personality Insight',
         'dates' : '2016',
         'description': 'App determines the user’s personality type based on their Twitter feed',
-        'images':['http://lorempixel.com/350/200/animals/', 'http://lorempixel.com/350/200/animals/'],
+        'images':['images/Magic1.jpg'],
         'url':'https://magic-personality-insight.herokuapp.com/'
     },
     {
         'title' : 'Hangman 2000',
         'dates' : '2016',
         'description': 'Multiplayer Hangman game',
-        'images':['http://lorempixel.com/350/200/animals/', 'http://lorempixel.com/350/200/animals/'],
+        'images':['images/Hangman1.jpg', 'images/Hangman2.jpg'],
         'url':'https://hangman-2000.herokuapp.com/'
     }
     ],
