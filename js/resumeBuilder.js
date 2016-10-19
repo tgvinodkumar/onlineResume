@@ -11,7 +11,7 @@ var bio = {
     'skills' : [ 'JavaScript', 'jQuery', 'Node.js/Express', 'React', 'AngularJS', 'HTML', 
                 'CSS', 'Neo4j', 'MongoDB', 'SQLite', 'SQL server',  'Socket.io', 
                 'Grunt', 'Gulp', 'Browserify', 'Git', 'Fortran'],
-    'biopic' : 'images/bramhi.jpg',
+    'biopic' : 'images/linkedin.jpg',
     display : function() {
 
         var formattedName = HTMLheaderName.replace('%data%', bio.name);
@@ -48,7 +48,7 @@ var work = {
                                 productivity in designing prefabricated metal buildings`,
                                 `Managed a team of 2 junior developers, overseeing work and resolving 
                                 issues to meet deadlines`,
-                                `Standardized the team’s build process using open source CruiseControl 
+                                `Standardized the team&rsquo;s build process using open source CruiseControl 
                                 continuous integration tool`,
                                 `Worked with the client to understand their business needs and translate 
                                 to technical requirements`]
