@@ -1,6 +1,6 @@
 var bio = {
     'name' : 'Vinod Thimmapuram',
-    'role' : 'Web Developer',
+    'role' : 'Full Stack Software Developer',
     'contacts' : {
         'mobile' : '513-237-9425',
         'email' : 'tgvinodkumar@gmail.com',
