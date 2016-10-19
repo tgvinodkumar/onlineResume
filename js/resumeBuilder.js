@@ -8,7 +8,9 @@ var bio = {
         'location' : 'Austin TX'
     },
     'welcomeMessage' : ' Thank you for visiting my online resume page.',
-    'skills' : ['HTML 5','CSS 3','JavaScript','jQuery','C++'],
+    'skills' : [ 'JavaScript', 'jQuery', 'Node.js/Express', 'React', 'AngularJS', 'HTML', 
+                'CSS', 'Neo4j', 'MongoDB', 'SQLite', 'SQL server',  'Socket.io', 
+                'Grunt', 'Gulp', 'Browserify', 'Git', 'Fortran'],
     'biopic' : 'images/bramhi.jpg',
     display : function() {
 
