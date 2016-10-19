@@ -36,6 +36,45 @@ var bio = {
     }
 };
 
+
+var projects = {
+    'projects' : [
+    {
+        'title' : 'QuickerCater',
+        'dates' : '2016',
+        'description': 'A cutting edge marketplace connecting selected local chefs and caterers to the hungry users',
+        'images':['images/QuickerCater1.jpg', 'images/QuickerCater2.jpg'],
+        'url':'https://quickercater.herokuapp.com/'
+    },
+    {
+        'title' : 'Magic Personality Insight',
+        'dates' : '2016',
+        'description': 'App determines the user’s personality type based on their Twitter feed',
+        'images':['images/Magic1.jpg'],
+        'url':'https://magic-personality-insight.herokuapp.com/'
+    },
+    {
+        'title' : 'Hangman 2000',
+        'dates' : '2016',
+        'description': 'Multiplayer Hangman game',
+        'images':['images/Hangman1.jpg', 'images/Hangman2.jpg'],
+        'url':'https://hangman-2000.herokuapp.com/'
+    }
+    ],
+    display : function() {
+        projects.projects.forEach(function(projectNumber) {
+
+            $('#projects').append(HTMLprojectStart);
+            $('.project-entry:last').append(HTMLprojectTitleUrl.replace('%data%',projectNumber.url)
+                                            +HTMLprojectTitle.replace('%data%',projectNumber.title));
+            $('.project-entry:last').append(HTMLprojectDates.replace('%data%',projectNumber.dates));
+            $('.project-entry:last').append(HTMLprojectDescription.replace('%data%',projectNumber.description));
+            $('.project-entry:last').append(HTMLprojectImage.replace('%data%',projectNumber.images[0]));
+            $('.project-entry:last').append(HTMLprojectImage.replace('%data%',projectNumber.images[1]));
+        });
+    }
+};
+
 var work = {
     'jobs' : [
         {
@@ -97,46 +136,16 @@ var work = {
     }
 };
 
-var projects = {
-    'projects' : [
-    {
-        'title' : 'QuickerCater',
-        'dates' : '2016',
-        'description': 'A cutting edge marketplace connecting selected local chefs and caterers to the hungry users',
-        'images':['images/QuickerCater1.jpg', 'images/QuickerCater2.jpg'],
-        'url':'https://quickercater.herokuapp.com/'
-    },
-    {
-        'title' : 'Magic Personality Insight',
-        'dates' : '2016',
-        'description': 'App determines the user’s personality type based on their Twitter feed',
-        'images':['images/Magic1.jpg'],
-        'url':'https://magic-personality-insight.herokuapp.com/'
-    },
-    {
-        'title' : 'Hangman 2000',
-        'dates' : '2016',
-        'description': 'Multiplayer Hangman game',
-        'images':['images/Hangman1.jpg', 'images/Hangman2.jpg'],
-        'url':'https://hangman-2000.herokuapp.com/'
-    }
-    ],
-    display : function() {
-        projects.projects.forEach(function(projectNumber) {
-
-            $('#projects').append(HTMLprojectStart);
-            $('.project-entry:last').append(HTMLprojectTitleUrl.replace('%data%',projectNumber.url)
-                                            +HTMLprojectTitle.replace('%data%',projectNumber.title));
-            $('.project-entry:last').append(HTMLprojectDates.replace('%data%',projectNumber.dates));
-            $('.project-entry:last').append(HTMLprojectDescription.replace('%data%',projectNumber.description));
-            $('.project-entry:last').append(HTMLprojectImage.replace('%data%',projectNumber.images[0]));
-            $('.project-entry:last').append(HTMLprojectImage.replace('%data%',projectNumber.images[1]));
-        });
-    }
-};
-
 var education = {
     'schools': [
+        {
+            'name' : 'Makersquare',
+            'location' : 'Austin TX',
+            'degree' : ' ',
+            'dates' : '2016',
+            'majors' : ['Advanced software engineering immersive'],
+            'url' : 'https://www.makersquare.com/'
+        },
         {
             'name' : 'JNTU',
             'location' : 'Hyderabad',
@@ -165,18 +174,18 @@ var education = {
     display : function() {
         $('#education').append(HTMLschoolStart);
         education.schools.forEach(function(item) {
-            $('.education-entry').append(HTMLschoolName.replace('%data%',item.name)+HTMLschoolDegree.replace('%data%',item.degree));
-            $('.education-entry').append(HTMLschoolDates.replace('%data%',item.dates));
+            $('.education-entry').append(HTMLschoolURL.replace('%data%', item.url)+HTMLschoolName.replace('%data%',item.name)+HTMLschoolDegree.replace('%data%',item.degree));
             $('.education-entry').append(HTMLschoolLocation.replace('%data%',item.location));
             item.majors.forEach(function(major) {
                 $('.education-entry').append(HTMLschoolMajor.replace('%data%',major));
             });
+            $('.education-entry').append(HTMLschoolDates.replace('%data%',item.dates));
         });
         $('#education').append(HTMLonlineClasses);
         $('#education').append(HTMLschoolStart);
         education.onlineCourses.forEach(function(item) {
-            $('.education-entry:last').append(HTMLonlineTitle.replace('%data%',item.title)+HTMLonlineSchool.replace('%data%',item.school));
-            $('.education-entry:last').append(HTMLonlineURL.replace('%data%',item.url));
+            $('.education-entry:last').append(HTMLonlineURL.replace('%data%',item.url)+HTMLonlineTitle.replace('%data%',item.title)+HTMLonlineSchool.replace('%data%',item.school));
+            // $('.education-entry:last').append(HTMLonlineURL.replace('%data%',item.url));
         });
     }
 };
