@@ -100,23 +100,33 @@ var work = {
 var projects = {
     'projects' : [
     {
-        'title' : 'project #1',
+        'title' : 'QuickerCater',
         'dates' : '2016',
-        'description': 'project #1 description',
-        'images':['http://lorempixel.com/350/200/animals/', 'http://lorempixel.com/350/200/animals/']
+        'description': 'A cutting edge marketplace connecting selected local chefs and caterers to the hungry users',
+        'images':['http://lorempixel.com/350/200/animals/', 'http://lorempixel.com/350/200/animals/'],
+        'url':'https://quickercater.herokuapp.com/'
     },
     {
-        'title' : 'project #2',
+        'title' : 'Magic Personality Insight',
         'dates' : '2016',
-        'description': 'project #2 description',
-        'images':['http://lorempixel.com/350/200/animals/', 'http://lorempixel.com/350/200/animals/']
+        'description': 'App determines the user’s personality type based on their Twitter feed',
+        'images':['http://lorempixel.com/350/200/animals/', 'http://lorempixel.com/350/200/animals/'],
+        'url':'https://magic-personality-insight.herokuapp.com/'
+    },
+    {
+        'title' : 'Hangman 2000',
+        'dates' : '2016',
+        'description': 'Multiplayer Hangman game',
+        'images':['http://lorempixel.com/350/200/animals/', 'http://lorempixel.com/350/200/animals/'],
+        'url':'https://hangman-2000.herokuapp.com/'
     }
     ],
     display : function() {
         projects.projects.forEach(function(projectNumber) {
 
             $('#projects').append(HTMLprojectStart);
-            $('.project-entry:last').append(HTMLprojectTitle.replace('%data%',projectNumber.title));
+            $('.project-entry:last').append(HTMLprojectTitleUrl.replace('%data%',projectNumber.url)
+                                            +HTMLprojectTitle.replace('%data%',projectNumber.title));
             $('.project-entry:last').append(HTMLprojectDates.replace('%data%',projectNumber.dates));
             $('.project-entry:last').append(HTMLprojectDescription.replace('%data%',projectNumber.description));
             $('.project-entry:last').append(HTMLprojectImage.replace('%data%',projectNumber.images[0]));
